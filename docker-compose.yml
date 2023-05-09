@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  prometheus:
+    container_name: local-prometheus
+    image: local-prometheus:latest
+    build: 
+      context: .
+      dockerfile: prometheus-grafana/dockerfiles/Dockerfile.prometheus
+    volumes:
+      - prome-data:/opt/bitnami/prometheus/data
+    ports:
+      - 9090:9090
+    networks:
+      - localtest
+
+  grafana:
+    container_name: local-grafana
+    image: local-grafana:latest
+    build: 
+      context: .
+      dockerfile: prometheus-grafana/dockerfiles/Dockerfile.grafana
+    volumes:
+      - grafana-data:/var/lib/grafana 
+    ports:
+      - 3000:3000
+    networks:
+      - localtest
+
+  postman-auto:
+    container_name: local-postman-auto
+    image: local-postman-auto:latest
+    build: 
+      context: .
+      dockerfile: build/Dockerfile 
+    ports:
+      - 8080:8080
+    networks:
+      - localtest
+
+volumes:
+  prome-data:
+  grafana-data:
+
+networks:
+  localtest:
+    name: localtest
+    driver: bridge

@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "81090232-7f57-40f9-a5ff-972ea9a04fad",
+		"name": "watertest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23212552"
+	},
+	"item": [
+		{
+			"name": "baidu.com",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://baidu.com",
+					"protocol": "https",
+					"host": [
+						"baidu",
+						"com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "qq.com",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://qq.com",
+					"protocol": "https",
+					"host": [
+						"qq",
+						"com"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

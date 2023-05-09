@@ -4,6 +4,7 @@ const fs = require('fs')
 const http = require('./http.js')
 
 let collectionFile = process.env.COLLECTION_FILE || './collection.json'
+//let envFile = process.env.ENVIRONMENT_FILE || './postman-env.json'
 let envFile = process.env.ENVIRONMENT_FILE || ''
 const collectionUrl = process.env.COLLECTION_URL || ''
 const metricsUrlPath = process.env.METRICS_URL_PATH || '/metrics'
@@ -11,7 +12,7 @@ const statusEnabled = process.env.STATUS_ENABLED || 'true'
 const envUrl = process.env.ENVIRONMENT_URL || ''
 const port = process.env.PORT || '8080'
 const refreshInterval = process.env.REFRESH_INTERVAL || '120'
-const runInterval = process.env.RUN_INTERVAL || '30'
+const runInterval = process.env.RUN_INTERVAL || '120'
 const runIterations = process.env.RUN_ITERATIONS || '1'
 const enableBail = process.env.ENABLE_BAIL || 'false'
 const requestMetrics = process.env.ENABLE_REQUEST_METRICS || 'true'

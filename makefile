@@ -6,7 +6,7 @@ SRC_DIR := src
 ROOT_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
 # Used when running locally
-COLLECTION_FILE ?= $(ROOT_DIR)/samples/example.json
+COLLECTION_FILE ?= $(ROOT_DIR)/samples/watertest/watertest.postman_collection.json
 
 # Used when deploying to Kubernetes
 # Override these when calling `make deploy`
